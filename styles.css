@@ -9,27 +9,23 @@ html {
 .body {
     height: 100vh;
     background: rgb(139, 139, 139);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
 }
 .slider__container {
     overflow: hidden;
-    box-shadow: 0 0 15px 3px white, inset 0 0 4px 2px white;
-    border-radius: 20px;
-    width: 700px;
+    width: 100vw;
+    height: 100vh;
 }
 .slider__track {
-    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     transition: 0.2s all ease-out;
+    width: 100%;
+    height: 100%;
 }
 .slider__item {
     box-shadow: 0 0 10px 4px rgb(212, 235, 243), inset 0 0 5px 3px rgb(208, 229, 236);
-    border-radius: 20px;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -41,6 +37,7 @@ html {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
 }
 .slider__item__count {
     position: absolute;
@@ -55,12 +52,15 @@ html {
     border: 1px solid gray;
 }
 .wrapper__btns {
-    margin: 30px;
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 2em;
     border: 2px solid white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 .btn__big {
     width: 6em;
@@ -105,12 +105,9 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-    .slider__container {
-        border-radius: 15px;
-        width: 100%;
-    }
     .wrapper__btns {
-        margin: 10px;
+        bottom: 0;
+        width: 100%;
         flex-direction: row;
         gap: 0.2em;
         border: 1px solid white;
@@ -118,7 +115,6 @@ html {
         padding: 10px;
     }
     .wrapper__btns {
-        margin: 10px;
         display: flex;
         gap: 0.2em;
         border: 1px solid white;
@@ -142,4 +138,48 @@ html {
         gap: 0.4em;
     }
     
+}
+
+@media screen and (orientation: landscape) {
+    .wrapper__btns {
+        height: 100vh;
+        width: 100px;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        transform: none;
+        flex-direction: column;
+        margin: 0;
+        gap: 0.2em;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .btn__big {
+        width: 6em;
+        height: 4em;
+    }
+    .btn__small {
+        width: 2em;
+        line-height: 2em;
+    }
+    .countBlock {
+        background: rgba(0,0,0,0.4);
+        border-radius: 4px;
+        padding: 10px 4px;
+    }
+    .countTitle {
+        font-size: 0.9em;
+        color: white;
+    }
+    .countBtns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.4em;
+    }
+
 }
