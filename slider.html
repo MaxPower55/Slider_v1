@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Slider V.1</title>
+</head>
+<body class="body">
+    <div class="slider__container">
+        <div class="slider__track">
+            <div class="slider__item"><span class="slider__item__count">1</span><img src="img/img_1.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">2</span><img src="img/img_2.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">3</span><img src="img/img_3.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">4</span><img src="img/img_4.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">5</span><img src="img/img_5.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">6</span><img src="img/img_6.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">7</span><img src="img/img_7.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">8</span><img src="img/img_8.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">9</span><img src="img/img_9.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">10</span><img src="img/img_10.jpg"></div>
+            <div class="slider__item"><span class="slider__item__count">11</span><img src="img/img_11.jpg"></div>
+        </div>
+    </div>
+    <div class="wrapper__btns">
+        <input type="button" value="PREV" id="btnPrev" class="btn__big input__style">
+        <div class="countBlock">
+            <p class="countTitle">Количество слайдов</p>
+            <div class="countBtns">
+                <input type="button" value="+" id="slidesToShowIncr" class="btn__small">
+                <span class="slidesCount" id="slidesToShowCount">1</span>
+                <input type="button" value="-" id="slidesToShowDecr" class="btn__small">
+            </div>
+        </div>
+        <div class="countBlock">
+            <p class="countTitle">Слайдов в прокрутке</p>
+            <div class="countBtns">
+                <input type="button" value="+" id="slidesToScrollIncr" class="btn__small">
+                <span class="slidesCount" id="slidesToScrollCount">1</span>
+                <input type="button" value="-" id="slidesToScrollDecr" class="btn__small">
+            </div>
+        </div>
+        <input type="button" value="NEXT" id="btnNext" class="btn__big input__style">
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
